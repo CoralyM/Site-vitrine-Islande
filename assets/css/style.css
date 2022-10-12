@@ -1,0 +1,527 @@
+:root {
+	--radius: 9vmin;
+	--d-outer: calc(var(--radius) * 2);
+    --grey: #535353;
+    --dark-blue: #80A2B0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body  {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 12;
+    display: none;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menu img {
+    width: 150px;
+    height: auto;
+}
+
+header .menu nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    text-transform: uppercase;
+    font-family: 'Palanquin Dark';
+}
+
+header .menu nav li a {
+    text-decoration: none;
+    color: var(--grey);
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+
+header .menu nav li.contact_link {
+    background-color: var(--dark-blue);
+    padding: 5px 20px;
+}
+
+header .menu nav li.contact_link a {
+    color: white;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../images/banner_top.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner h1 {
+    font-size: 15vw;
+    color: white;
+    position: absolute;
+    top: -27%;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+    font-family: 'Palanquin Dark';
+    text-transform: uppercase;
+    background-attachment: fixed;
+}
+
+.banner h2 {
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    color: white;
+    position: absolute;
+    top: 2%;
+    transform: translateX(-50%);
+    left: 50%;
+    font-family: 'Cormorant Garamond';
+    text-transform: uppercase;
+}
+
+.banner div.background_bottom {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-image: url('../../images/banner_bottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .banner_arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: auto;
+}
+
+.banner_circle {
+	position: absolute;
+    z-index: 10;
+    top: 75vh;
+    left: 50%;
+    transform: translateX(-50%);
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner_logo {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url(../../images/icons/fleche_bottom.png);
+	background-size: cover;
+	border-radius: 50%;
+	filter: contrast(1.5);
+}
+.banner_text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	animation: rotateText 10s linear infinite;
+}
+@keyframes rotateText {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+.banner_text p span {
+	position: absolute;
+	left: 50%;
+	font-size: 1.2em;
+	transform-origin: 0 var(--radius);
+    color: white;
+    font-weight: bold;
+}
+
+
+/* VALUES */
+
+.values {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.values .values_titles {
+    text-align: center;
+}
+
+.values .values_titles h2 {
+    font-family: 'Palanquin Dark';
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.values .values_titles h3 {
+    font-family: 'Cormorant Garamond';
+    color: var(--grey);
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.values .values_content {
+    display: flex;
+    padding-top: 70px;
+}
+
+.values .values_content h4 {
+    font-family: 'Cormorant Garamond';
+    font-size: 1.9rem;
+    font-weight: lighter;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.values .values_content p {
+    font-family: 'Cormorant Garamond';
+    font-size: 1.1rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.values .values_content a {
+    color: var(--dark-blue);
+    font-family: 'Palanquin Dark';
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+.values_content .values_text_left {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.values_content .values_text_left div:last-child {
+    transform: translate(50px, 50px);
+}
+
+.values_content .values_images {
+    width: 56%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.values_content .values_images::before {
+    content: '';
+    background-image: url('../../images/line-1.png');
+    background-size: cover;
+    position: absolute;
+    top: -220px;
+    left: -100px;
+    width: 250px;
+    height: 230px;
+}
+
+.values_content .values_images::after {
+    content: '';
+    background-image: url('../../images/line-2.png');
+    background-size: cover;
+    position: absolute;
+    right: -50px;
+    bottom: -240px;
+    width: 150px;
+    height: 300px;
+    z-index: -1;
+}
+
+.values_content .values_images div:first-child {
+    height: 435px;
+    width: 300px;
+    background-image: url('../../images/values_1.jpg');
+    background-position: center;
+    background-size: cover;
+    transform: rotate(-5deg);
+    margin-left: 50px;
+}
+
+.values_content .values_images div:last-child {
+    height: 270px;
+    width: 185px;
+    background-image: url('../../images/values_2.jpg');
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50px, 25px) rotate(5deg);
+}
+
+.values_content .values_text_right {
+    width: 22%;
+    margin-top: 70px;
+}
+
+.values_content .values_text_right h4,
+.values_content .values_text_right p {
+    text-align: right;
+}
+
+.values_content .values_text_right a {
+    display: flex;
+    justify-content: right;
+}
+
+/* ACTIVITIES */
+
+.activities {
+    margin-top: 240px;
+    height: 550px;
+    background-image: url('../../images/activities.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.activities::after {
+    content: '';
+    background-image: url('../../images/line-3.png');
+    background-size: cover;
+    position: absolute;
+    bottom: -280px;
+    left: 90px;
+    width: 250px;
+    height: 300px;
+    z-index: -1;
+}
+
+.activities h2 {
+    width: 50%;
+    color: white;
+    font-size: 6.25rem;
+    font-family: 'Palanquin Dark';
+    text-transform: uppercase;
+    margin: 20px;
+    line-height: 6.25rem;
+    letter-spacing: 3px;
+}
+
+.activities h2 span {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-size: 7rem;
+    letter-spacing: 15px;
+    font-weight: lighter;
+}
+
+.activities .activities_content {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding-top: 180px;
+    color: white;
+    text-align: center;
+}
+
+.activities .activities_content div img {
+    width: 40px;
+    height: 40px;
+}
+
+.activities .activities_content div h3 {
+    font-family: 'Cormorant Garamond';
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.activities .activities_content div p {
+    font-family: 'Cormorant Garamond';
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.numbers .map {
+    background-image: url(../../images/map_iceland.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 50%;
+}
+
+.numbers .figures {
+    width: 25%;
+    color: var(--grey);
+}
+
+.numbers .figures h3 {
+    font-family: 'Palanquin Dark';
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.numbers .figures p {
+    font-family: 'Cormorant Garamond';
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.call {
+    width: 60%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.call h2 {
+    font-family: 'Palanquin Dark';
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.call h3 {
+    font-family: 'Cormorant Garamond';
+    color: var(--grey);
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.call div {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-family: 'Palanquin Dark';
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.call div a:nth-child(1) {
+    text-decoration: none;
+    color: white;
+    background-color: var(--dark-blue);
+    padding: 7px 20px;
+}
+
+.call div a:nth-child(2) {
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.support .logo_partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.support .logo_partners img {
+    filter: grayscale(100%);
+    height: auto;
+    width: 100px;
+    opacity: 0.7;
+}
+
+.support h3 {
+    font-family: 'Cormorant Garamond';
+    color: var(--grey);
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    margin-top: 0;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer .footer_credits img {
+    width: 150px;
+    height: auto;
+}
+
+footer .footer_credits ul {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-size: 0.75rem;
+    font-weight: lighter;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+footer .footer_credits ul li,
+footer .footer_credits ul li a {
+    color: var(--grey);
+}
+
+footer .footer_credits li:not(:first-child):before {
+    content: '-';
+}
+
+footer .footer_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.75rem;
+    margin: 0;
+    gap: 20px;
+    text-transform: uppercase;
+    font-family: 'Palanquin Dark';
+}
+
+footer .footer_menu li a {
+    color: var(--grey);
+    text-decoration: none;
+}
