@@ -1,3 +1,5 @@
+/* HEADER */
+
 window.onscroll = function() {
     let header = document.getElementsByTagName('header');
 
@@ -8,6 +10,24 @@ window.onscroll = function() {
     }
 };
 
+/* MENU */
+
+function menu() {
+    let menu = document.getElementById('menu_nav');
+    let btn = document.getElementById('menu_btn');
+  
+    if(btn.classList.contains('menu_close')) {
+      menu.style.display = 'block';
+      btn.classList.remove('menu_close');
+      btn.classList.add('menu_open');
+    } else {
+      menu.style.display = 'none';
+      btn.classList.remove('menu_open');
+      btn.classList.add('menu_close');
+    }
+  }
+
+/* BANNER */
 
 const text = document.querySelector(".banner_text p");
 
@@ -17,6 +37,8 @@ text.innerHTML = text.innerText
 		(char, i) => `<span style="transform:rotate(${i * 13}deg)">${char}</span>`
 	)
 	.join("");
+
+/* NUMBERS */
 
 window.addEventListener('scroll', function() {
     var element = document.querySelector('.numbers');
@@ -30,11 +52,11 @@ window.addEventListener('scroll', function() {
         const updateCount = () => {
         const target = + n.getAttribute('data-target');
         const count = + n.innerText;
-        const speed = 7000;
+        const speed = 9000;
         const inc = target / speed;
         if(count < target) {
             n.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 200);
+            setTimeout(updateCount, 100);
         } else {
             n.innerText = target;
         }
@@ -43,3 +65,60 @@ window.addEventListener('scroll', function() {
     }
     }
 });
+
+/* ANIMATIONS */
+
+var tl_values = gsap.timeline(
+    {
+        scrollTrigger: {
+          trigger: ".values_images",
+        }
+      }
+);
+tl_values.from('.line-1', {y: -500})
+tl_values.from("#values_img1", {y: 200, duration: 0.4});
+tl_values.from("#values_img2", {y: 200, duration: 0.4});
+tl_values.from("#values_text_left1", {x: -800, duration: 0.4});
+tl_values.from("#values_text_left2", {x: -800, duration: 0.4});
+tl_values.from("#values_text_right", {x: 800, duration: 0.4});
+
+gsap.from(".line-2", {
+    scrollTrigger: ".activities",
+    opacity: 0,
+    duration: 1,
+  });
+
+
+gsap.from(".activities_title", {
+scrollTrigger: ".activities",
+x: -500,
+duration: 1,
+});
+
+var tl_activities = gsap.timeline(
+{
+    scrollTrigger: {
+        trigger: "#activities_content1",
+    }
+    }
+);
+tl_activities.from('#activities_content1', {opacity: 0});
+tl_activities.from('#activities_content2', {opacity: 0});
+tl_activities.from('#activities_content3', {opacity: 0});
+tl_activities.from('#activities_content4', {opacity: 0});
+tl_activities.from('#activities_content5', {opacity: 0});
+
+var tl_map = gsap.timeline(
+    {
+        scrollTrigger: {
+            trigger: ".map",
+        }
+        }
+    );
+    tl_map.from('.line-3', {y: -400});
+    tl_map.from('#pin2', {opacity: 0});
+    tl_map.from('#pin3', {opacity: 0});
+    tl_map.from('#pin4', {opacity: 0});
+    tl_map.from('#pin5', {opacity: 0});
+    tl_map.from('#pin6', {opacity: 0});
+    tl_map.from('#pin7', {opacity: 0});

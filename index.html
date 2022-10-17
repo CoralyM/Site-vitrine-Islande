@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iceland Travel</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Palanquin+Dark:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
     <header>
         <div class="container menu">
-            <img src="images/logo.png">
-            <nav>
+            <img src="images/logo.png" class="logo">
+            <nav id="menu_nav">
                 <ul>
                     <li>
                         <a href="">Agency</a>
@@ -31,6 +31,7 @@
                     </li>
                 </ul>
             </nav>
+            <div class="menu_btn menu_close" id="menu_btn" onclick="menu()"></div>
         </div>
     </header>
 
@@ -50,71 +51,84 @@
     </a>
 
     <section id="values" class="values container">
+        <img src="images/line-1.png" class="line-1">
         <div class="values_titles">
             <h2>Your future trip</h2>
             <h3>Embark on an extraordinary journey...</h3>
         </div>
         <div class="values_content">
             <div class="values_text_left">
-                <div>
+                <div id="values_text_left1">
                     <h4>Unforgettable experiences</h4>
                     <p>Discover landscapes like you've never seen before through our travel proposals...</p>
                     <a href="">Read more</a>
                 </div>
-                <div>
+                <div id="values_text_left2">
                     <h4>Surrounded by our team</h4>
                     <p>Our team accompanies you before, during and after your trip, to ensure an Unforgettable experience.</p>
                     <a href="">Read more</a>
                 </div>
             </div>
             <div class="values_images">
-                <div></div>
-                <div></div>
+                <div id="values_img1"></div>
+                <div id="values_img2"></div>
             </div>
             <div class="values_text_right">
-                <h4>Respecting nature</h4>
-                <p>
-                    All our trips and activities take place with the strictest respect for nature and the environment.
-                    To discover does not mean to demolish.
-                </p>
-                <a href="">Read more</a>
+                <div id="values_text_right">
+                    <h4>Respecting nature</h4>
+                    <p>
+                        All our trips and activities take place with the strictest respect for nature and the environment.
+                        To discover does not mean to demolish.
+                    </p>
+                    <a href="">Read more</a>
+                </div>
             </div>
         </div>
+        <img src="images/line-2.png" class="line-2">
     </section>  
 
     <section class="activities container">
-        <h2>What is <span>known</span></h2>
+        <h2 class="activities_title">What is <span>known</span></h2>
         <div class="activities_content">
-            <div>
+            <div id="activities_content1">
                 <img src="images/icons/cascade.png">
                 <h3>Waterfall</h3>
                 <p>beautiful and spectacular</p>
             </div>
-            <div>
+            <div id="activities_content2">
                 <img src="images/icons/volcan.png">
                 <h3>Volcano</h3>
                 <p>known all over the world</p>
             </div>
-            <div>
+            <div id="activities_content3">
                 <img src="images/icons/glacier.png">
                 <h3>Glacier</h3>
                 <p>best natural wonders of the world</p>
             </div>
-            <div>
+            <div id="activities_content4">
                 <img src="images/icons/eglise.png">
                 <h3>Church</h3>
                 <p>architectural jewels of Iceland</p>
             </div>
-            <div>
+            <div id="activities_content5">
                 <img src="images/icons/vagues.png">
                 <h3>Beach</h3>
                 <p>discover the black sand</p>
             </div>
         </div>
+        <img src="images/line-3.png" class="line-3">
     </section>
 
     <section class="numbers container">
-        <div class="map"></div>
+        <div class="map">
+            <div class="circle_pin" id="pin1"></div>
+            <div class="circle_pin" id="pin2"></div>
+            <div class="circle_pin" id="pin3"></div>
+            <div class="circle_pin" id="pin4"></div>
+            <div class="circle_pin" id="pin5"></div>
+            <div class="circle_pin" id="pin6"></div>
+            <div class="circle_pin" id="pin7"></div>
+        </div>
         <div class="figures">
             <div>
                 <h3><span class="counter" data-target="7">0</span></h3>
@@ -142,18 +156,19 @@
 
     <section class="support container">
         <div class="logo_partners">
-            <img src="images/partners/icelandair.png" loading="lazy">
-            <img src="images/partners/scanditours.png" loading="lazy">
-            <img src="images/partners/tripadvisor.png" loading="lazy">
-            <img src="" loading="lazy">
-            <img src="" loading="lazy">
+            <img src="images/partners/icelandair.png" loading="lazy" alt="logo icelandair">
+            <img src="images/partners/scanditours.png" loading="lazy" alt="logo scanditours">
+            <img src="images/partners/tripadvisor.png" loading="lazy" alt="logo tripadvisor">
+            <img src="images/partners/arctic_adventures.svg" loading="lazy" alt="logo arctic adventures">
+            <img src="images/partners/reykjavik_sightseeing.png" loading="lazy" alt="logo reyjavik sightseeing">
         </div>
+        <img src="images/line-4.png" loading="lazy" alt="separator" class="separator">
         <h3>They support us</h3>
     </section>
 
     <footer class="container">
         <div class="footer_credits">
-            <img src="images/logo.png" loading="lazy">
+            <img src="images/logo.png" loading="lazy" alt="logo">
             <ul>
                 <li>Agency 2022</li>
                 <li>
@@ -183,6 +198,8 @@
         </ul>
     </footer>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
