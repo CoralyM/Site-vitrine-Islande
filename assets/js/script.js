@@ -52,11 +52,11 @@ window.addEventListener('scroll', function() {
         const updateCount = () => {
         const target = + n.getAttribute('data-target');
         const count = + n.innerText;
-        const speed = 9000;
+        const speed = 10000;
         const inc = target / speed;
         if(count < target) {
             n.innerText = Math.ceil(count + inc);
-            setTimeout(updateCount, 100);
+            setTimeout(updateCount, 1);
         } else {
             n.innerText = target;
         }
@@ -68,6 +68,17 @@ window.addEventListener('scroll', function() {
 
 /* ANIMATIONS */
 
+var tl_values_img = gsap.timeline(
+    {
+        scrollTrigger: {
+          trigger: ".values_titles",
+        }
+      }
+);
+tl_values_img.from('.line-1', {y: -500})
+tl_values_img.from("#values_img1", {y: 200, duration: 0.7});
+tl_values_img.from("#values_img2", {y: 200, duration: 0.7});
+
 var tl_values = gsap.timeline(
     {
         scrollTrigger: {
@@ -75,12 +86,9 @@ var tl_values = gsap.timeline(
         }
       }
 );
-tl_values.from('.line-1', {y: -500})
-tl_values.from("#values_img1", {y: 200, duration: 0.4});
-tl_values.from("#values_img2", {y: 200, duration: 0.4});
-tl_values.from("#values_text_left1", {x: -800, duration: 0.4});
-tl_values.from("#values_text_left2", {x: -800, duration: 0.4});
-tl_values.from("#values_text_right", {x: 800, duration: 0.4});
+tl_values.from("#values_text_left1", {x: -800, duration: 0.7});
+tl_values.from("#values_text_left2", {x: -800, duration: 0.7});
+tl_values.from("#values_text_right", {x: 800, duration: 0.7});
 
 gsap.from(".line-2", {
     scrollTrigger: ".activities",
@@ -102,11 +110,11 @@ var tl_activities = gsap.timeline(
     }
     }
 );
-tl_activities.from('#activities_content1', {opacity: 0});
-tl_activities.from('#activities_content2', {opacity: 0});
-tl_activities.from('#activities_content3', {opacity: 0});
-tl_activities.from('#activities_content4', {opacity: 0});
-tl_activities.from('#activities_content5', {opacity: 0});
+tl_activities.from('#activities_content1', {opacity: 0, duration: 0.3});
+tl_activities.from('#activities_content2', {opacity: 0, duration: 0.3});
+tl_activities.from('#activities_content3', {opacity: 0, duration: 0.3});
+tl_activities.from('#activities_content4', {opacity: 0, duration: 0.3});
+tl_activities.from('#activities_content5', {opacity: 0, duration: 0.3});
 
 var tl_map = gsap.timeline(
     {
@@ -115,10 +123,23 @@ var tl_map = gsap.timeline(
         }
         }
     );
-    tl_map.from('.line-3', {y: -400});
-    tl_map.from('#pin2', {opacity: 0});
-    tl_map.from('#pin3', {opacity: 0});
-    tl_map.from('#pin4', {opacity: 0});
-    tl_map.from('#pin5', {opacity: 0});
-    tl_map.from('#pin6', {opacity: 0});
-    tl_map.from('#pin7', {opacity: 0});
+tl_map.from('.line-3', {y: -400});
+tl_map.from('#pin2', {opacity: 0, duration: 0.3});
+tl_map.from('#pin3', {opacity: 0, duration: 0.3});
+tl_map.from('#pin4', {opacity: 0, duration: 0.3});
+tl_map.from('#pin5', {opacity: 0, duration: 0.3});
+tl_map.from('#pin6', {opacity: 0, duration: 0.3});
+tl_map.from('#pin7', {opacity: 0, duration: 0.3});
+
+var tl_partners = gsap.timeline(
+    {
+        scrollTrigger: {
+            trigger: ".logo_partners",
+        }
+        }
+    );
+tl_map.from('#partner1', {opacity: 0, duration: 0.3});
+tl_map.from('#partner2', {opacity: 0, duration: 0.3});
+tl_map.from('#partner3', {opacity: 0, duration: 0.3});
+tl_map.from('#partner4', {opacity: 0, duration: 0.3});
+tl_map.from('#partner5', {opacity: 0, duration: 0.3});
