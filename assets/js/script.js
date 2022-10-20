@@ -138,8 +138,8 @@ var tl_partners = gsap.timeline(
         }
         }
     );
-tl_map.from('#partner1', {opacity: 0, duration: 0.3});
-tl_map.from('#partner2', {opacity: 0, duration: 0.3});
-tl_map.from('#partner3', {opacity: 0, duration: 0.3});
-tl_map.from('#partner4', {opacity: 0, duration: 0.3});
-tl_map.from('#partner5', {opacity: 0, duration: 0.3});
+tl_map.from('#partner1', {opacity: 0, duration: 0.4});
+tl_map.from('#partner2', {opacity: 0, duration: 0.4});
+tl_map.from('#partner3', {opacity: 0, duration: 0.4});
+tl_map.from('#partner4', {opacity: 0, duration: 0.4});
+tl_map.from('#partner5', {opacity: 0, duration: 0.4});

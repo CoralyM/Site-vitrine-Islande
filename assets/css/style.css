@@ -65,7 +65,7 @@ header .menu nav ul {
     list-style: none;
     gap: 30px;
     text-transform: uppercase;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
 }
 
 header .menu nav li a {
@@ -114,7 +114,7 @@ header .menu nav li.contact_link:hover a {
     transform: translateX(-50%);
     left: 50%;
     z-index: 1;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     text-transform: uppercase;
 }
 
@@ -126,7 +126,7 @@ header .menu nav li.contact_link:hover a {
     top: 2%;
     transform: translateX(-50%);
     left: 50%;
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
 }
 
@@ -226,7 +226,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .values .values_titles h2 {
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     color: var(--dark-blue);
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -234,7 +234,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .values .values_titles h3 {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     color: var(--grey);
     font-style: italic;
     font-size: 1.8rem;
@@ -249,7 +249,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .values .values_content h4 {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.9rem;
     font-weight: lighter;
     font-style: italic;
@@ -257,7 +257,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .values .values_content p {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
     font-weight: lighter;
     font-style: italic;
@@ -265,7 +265,7 @@ header .menu nav li.contact_link:hover a {
 
 .values .values_content a {
     color: var(--dark-blue);
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     text-decoration: none;
     font-size: 0.75rem;
 }
@@ -352,7 +352,7 @@ header .menu nav li.contact_link:hover a {
     width: 50%;
     color: white;
     font-size: 6.25rem;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     text-transform: uppercase;
     margin: 20px;
     line-height: 6.25rem;
@@ -360,7 +360,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .activities h2 span {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 7rem;
     letter-spacing: 15px;
@@ -382,13 +382,13 @@ header .menu nav li.contact_link:hover a {
 }
 
 .activities .activities_content div h3 {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     margin: 0;
 }
 
 .activities .activities_content div p {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-weight: lighter;
     font-style: italic;
     font-size: 0.8rem;
@@ -463,13 +463,13 @@ header .menu nav li.contact_link:hover a {
 }
 
 .numbers .figures h3 {
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     font-size: 2.5rem;
     margin: 0;
 }
 
 .numbers .figures p {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-weight: lighter;
     font-style: italic;
     font-size: 1.1rem;
@@ -485,7 +485,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .call h2 {
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     color: var(--dark-blue);
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -494,7 +494,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .call h3 {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     color: var(--grey);
     font-style: italic;
     font-size: 1.8rem;
@@ -509,7 +509,7 @@ header .menu nav li.contact_link:hover a {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -556,7 +556,7 @@ header .menu nav li.contact_link:hover a {
 }
 
 .support h3 {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     color: var(--grey);
     font-style: italic;
     font-size: 1.1rem;
@@ -585,7 +585,7 @@ footer .footer_credits img {
 }
 
 footer .footer_credits ul {
-    font-family: 'Cormorant Garamond';
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 0.75rem;
     font-weight: lighter;
@@ -612,7 +612,7 @@ footer .footer_menu {
     margin: 0;
     gap: 20px;
     text-transform: uppercase;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
 }
 
 footer .footer_menu li a {
